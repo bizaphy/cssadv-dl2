@@ -1,0 +1,179 @@
+/* ################################## */
+/* GENERAL */
+/* ################################## */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ################################## */
+/* HEADER */
+/* ################################## */
+
+header {
+  grid-area: header;
+  background-color: #212529;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: #51cf66;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0.6rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+  border: 1px solid #51cf66;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* ################################## */
+/* MAIN - SECCION DE COMPRA*/
+/* ################################## */
+
+main {
+  grid-area: main;
+  padding: 2rem;
+  background-color: #868e96;
+  border: #2b8a3e 3px solid;
+  border-left: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 90%;
+  height: auto;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.info-producto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.info-producto-nombre {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
+
+.info-producto-precio {
+  padding: 0.2rem;
+}
+.boton {
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #343a40;
+  color: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.boton:hover {
+  color: #51cf66;
+  background-color: #495057;
+  font-weight: 500;
+}
+.producto:hover {
+  box-shadow: 2px 2px 20px 2px #37b24d;
+}
+
+/* ################################## */
+/* BARRA LATERAL */
+/* ################################## */
+
+aside {
+  grid-area: sidebar;
+  background-color: #495057;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+  border: #2b8a3e 3px solid;
+}
+
+.categoria {
+  padding: 1rem 1rem 1.5rem 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #40c057;
+  font-weight: 500;
+}
+
+.categoria-info {
+  display: flex;
+  gap: 0.5rem;
+  color: #e9ecef;
+}
+
+.categoria-cantidad {
+  font-size: 0.8rem;
+  color: #adb5bd;
+}
+
+/* ################################## */
+/* FOOTER */
+/* ################################## */
+
+footer {
+  grid-area: footer;
+  color: #adb5bd;
+  background-color: #343a40;
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.link-footer,
+.link-footer:active {
+  text-decoration: none;
+  color: #adb5bd;
+}
+
+.link-footer:hover {
+  color: #37b24d;
+}
